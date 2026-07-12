@@ -1,118 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechDownloads - ISOs e Extensões</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechDownloads — index of /</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="container header-flex">
-            <h1 class="logo">Tech<span>Downloads</span></h1>
-            <div class="tabs-nav">
-                <button class="tab-btn active" onclick="switchTab('extensoes')">🔌 Extensões</button>
-                <button class="tab-btn" onclick="switchTab('sistemas')">💿 ISOs e Sistemas</button>
-            </div>
-        </div>
-    </header>
+<header>
+  <div class="wrap header-inner">
+    <div class="logo">Tech<span>Downloads</span></div>
 
-    <main class="container">
-        
-        <section id="extensoes" class="tab-content active">
-            <h2 class="section-title">Extensões Úteis</h2>
-            <div class="cards-list">
+  </div>
+</header>
 
-                <div class="download-card projeto-proprio">
-                    <div class="card-info">
-                        <div class="badge-row">
-                            <span class="badge category">Produtividade</span>
-                            <span class="badge author">Feito por mim</span>
-                        </div>
-                        <h3>AutoTabs Manager (v1.0)</h3>
-                        <p>Minha extensão própria para organizar abas do Chrome automaticamente por domínio. Evita travamentos no navegador.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="downloads/autotabs-manager.zip" download class="btn-download">Baixar Extensão ↓</a>
-                    </div>
-                </div>
+<div class="wrap">
 
-                <div class="download-card">
-                    <div class="card-info">
-                        <div class="badge-row">
-                            <span class="badge category">Segurança</span>
-                            <span class="badge web">Web Store</span>
-                        </div>
-                        <h3>uBlock Origin</h3>
-                        <p>O melhor bloqueador de anúncios e scripts da atualidade. Leve e essencial para qualquer navegador baseado em Chromium.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://chromewebstore.google.com/" target="_blank" class="btn-download btn-externo">Acessar na Web Store ↗</a>
-                    </div>
-                </div>
+  <section class="hero">
+    <div class="hero-eyebrow mono">index of /community<span class="cursor"></span></div>
+    <h1 class="hero-title">Baixe o que importa,<br>sem o que sobra.</h1>
+    <p class="hero-sub">Um catálogo pessoal de ISOs modificadas, extensões e aplicativos — testados, sem enrolação e sem instalador cheio de coisa extra.</p>
 
-            </div>
-        </section>
+    <div class="tiles">
+      <a class="tile" data-cat="iso" href="#">
+        <div class="tile-icon">📀</div>
+        <div class="tile-name">ISOs e Imagens de Sistema</div>
+        <div class="tile-count">Windows e Linux prontos pra gravar</div>
+        <div class="tile-path mono">/isos <span class="arrow">→</span></div>
+      </a>
+      <a class="tile" data-cat="ext" href="#">
+        <div class="tile-icon">🧩</div>
+        <div class="tile-name">Extensões</div>
+        <div class="tile-count">Pra Chrome e outros navegadores Chromium</div>
+        <div class="tile-path mono">/extensoes <span class="arrow">→</span></div>
+      </a>
+      <a class="tile" data-cat="app" href="#">
+        <div class="tile-icon">💾</div>
+        <div class="tile-name">Apps</div>
+        <div class="tile-count">Programas essenciais pro dia a dia</div>
+        <div class="tile-path mono">/apps <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </section>
 
-        <section id="sistemas" class="tab-content">
-            <h2 class="section-title">ISOs e Imagens de Sistema</h2>
-            <div class="cards-list">
 
-                <div class="download-card projeto-proprio">
-                    <div class="card-info">
-                        <div class="badge-row">
-                            <span class="badge category">Windows 11</span>
-                            <span class="badge author">Modificada</span>
-                        </div>
-                        <h3>Windows 11 UltraLight 2026</h3>
-                        <p>Minha versão otimizada do Windows 11. Sem telemetria, sem aplicativos nativos inúteis e focado em dar vida nova a PCs fracos.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://mega.nz/" target="_blank" class="btn-download">Baixar ISO (4.2 GB) ↓</a>
-                    </div>
-                </div>
+  <footer>
+    <span class="mono">TechDownloads — index de arquivos, atualizado manualmente</span>
+    <span class="mono">hospedado com GitHub Pages</span>
+  </footer>
 
-                <div class="download-card">
-                    <div class="card-info">
-                        <div class="badge-row">
-                            <span class="badge category">Linux</span>
-                            <span class="badge official">Oficial</span>
-                        </div>
-                        <h3>Ubuntu Desktop 26.04 LTS</h3>
-                        <p>Link direto para o download da imagem oficial estável do Ubuntu. Ideal para desenvolvedores e servidores caseiros.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://ubuntu.com/download/desktop" target="_blank" class="btn-download btn-externo">Site Oficial ↗</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 TechDownloads. Arquivos verificados e livres de vírus.</p>
-    </footer>
-
-    <script>
-        function switchTab(tabId) {
-            // 1. Esconde todos os conteúdos das abas
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
-
-            // 2. Remove o estilo de botão "ativo" de todos os botões
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-
-            // 3. Mostra o conteúdo da aba clicada
-            document.getElementById(tabId).classList.add('active');
-
-            // 4. Deixa o botão clicado com estilo "ativo"
-            event.currentTarget.classList.add('active');
-        }
-    </script>
+</div>
 
 </body>
 </html>
