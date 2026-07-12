@@ -11,17 +11,17 @@
     <header>
         <div class="container header-flex">
             <h1 class="logo">Tech<span>Downloads</span></h1>
-            <nav>
-                <a href="#extensoes">Extensões</a>
-                <a href="#sistemas">ISOs e Sistemas</a>
-            </nav>
+            <div class="tabs-nav">
+                <button class="tab-btn active" onclick="switchTab('extensoes')">🔌 Extensões</button>
+                <button class="tab-btn" onclick="switchTab('sistemas')">💿 ISOs e Sistemas</button>
+            </div>
         </div>
     </header>
 
     <main class="container">
         
-        <section id="extensoes" class="download-section">
-            <h2 class="section-title">🔌 Extensões Úteis</h2>
+        <section id="extensoes" class="tab-content active">
+            <h2 class="section-title">Extensões Úteis</h2>
             <div class="cards-list">
 
                 <div class="download-card projeto-proprio">
@@ -55,8 +55,8 @@
             </div>
         </section>
 
-        <section id="sistemas" class="download-section">
-            <h2 class="section-title">💿 ISOs e Imagens de Sistema</h2>
+        <section id="sistemas" class="tab-content">
+            <h2 class="section-title">ISOs e Imagens de Sistema</h2>
             <div class="cards-list">
 
                 <div class="download-card projeto-proprio">
@@ -95,6 +95,24 @@
     <footer>
         <p>&copy; 2026 TechDownloads. Arquivos verificados e livres de vírus.</p>
     </footer>
+
+    <script>
+        function switchTab(tabId) {
+            // 1. Esconde todos os conteúdos das abas
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // 2. Remove o estilo de botão "ativo" de todos os botões
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // 3. Mostra o conteúdo da aba clicada
+            document.getElementById(tabId).classList.add('active');
+
+            // 4. Deixa o botão clicado com estilo "ativo"
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
