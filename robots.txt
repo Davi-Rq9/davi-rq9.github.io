@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://davi-rq9.github.io/Teste/sitemap.xml
