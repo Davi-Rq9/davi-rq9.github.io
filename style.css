@@ -20,7 +20,7 @@ body {
 /* Header */
 header {
     background-color: #121824;
-    padding: 20px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #21262d;
     position: sticky;
     top: 0;
@@ -31,6 +31,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo {
@@ -40,20 +42,45 @@ header {
 
 .logo span { color: #58a6ff; }
 
-nav a {
-    color: #8b949e;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: color 0.2s;
+/* Menu de Abas */
+.tabs-nav {
+    display: flex;
+    gap: 10px;
 }
 
-nav a:hover { color: #58a6ff; }
+.tab-btn {
+    background-color: #21262d;
+    color: #8b949e;
+    border: 1px solid #30363d;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+}
 
-/* Seções */
-.download-section {
-    margin-top: 40px;
+.tab-btn:hover {
+    color: #f0f6fc;
+    border-color: #8b949e;
+}
+
+/* Estilo do Botão Ativo */
+.tab-btn.active {
+    background-color: #1f6feb;
+    color: #fff;
+    border-color: #388bfd;
+}
+
+/* MECANISMO DAS ABAS: Esconde por padrão */
+.tab-content {
+    display: none;
+    margin-top: 30px;
+}
+
+/* Só mostra se tiver a classe .active */
+.tab-content.active {
+    display: block;
 }
 
 .section-title {
@@ -94,10 +121,9 @@ nav a:hover { color: #58a6ff; }
     transform: translateY(-2px);
 }
 
-/* Destaque para projetos criados por você */
 .download-card.projeto-proprio {
-    border-color: #238636; /* Borda verde */
-    background-color: #13231b; /* Fundo levemente esverdeado */
+    border-color: #238636;
+    background-color: #13231b;
 }
 
 /* Badges / Etiquetas */
