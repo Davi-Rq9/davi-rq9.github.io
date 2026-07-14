@@ -40,18 +40,33 @@
           <div class="card-desc">Sistema operacional da Microsoft&reg; Windows&reg; versão mais leve e enxuta sem cortana e com suporte extendido(Long-Term Servicing Channel).</div>
         </div>
         <div class="card-right">
-        <a class="btn btn-primary" 
-   style="--acc-btn: var(--iso);" 
-   href="https://drive.usercontent.google.com/download?id=1EP5ZesJgOIdS5SI5n9PlycatacUfH39g&export=download&authuser=0&confirm=t&uuid=7b02edff-3fbe-4c8c-b5a0-ec48a5193665&at=ABswASZcBLEDZ5MPA3nQjLoi_UN9%3A1783998324780"
-   onclick="alert('Aviso: Como a ISO do Windows é um arquivo grande (4,4 GB), o Google Drive exibirá uma tela dizendo que não pode verificar vírus. Pode clicar em \'Fazer o download mesmo assim\' com total segurança!');"
-   target="_blank">
-   Baixar WIndows 10 LTSC ↓
-</a>
+         <a class="btn btn-primary" style="--acc-btn: var(--iso);" href="https://drive.usercontent.google.com/download?id=1EP5ZesJgOIdS5SI5n9PlycatacUfH39g&export=download&authuser=0&confirm=t&uuid=7b02edff-3fbe-4c8c-b5a0-ec48a5193665&at=ABswASZcBLEDZ5MPA3nQjLoi_UN9%3A1783998324780">Baixar WIndows 10 LTSC ↓</a>
           <span class="btn-size mono">4.4 GB</span>
         </div>
       </div>
+<div id="avisoModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); align-items: center; justify-content: center;">
+  <div style="background-color: #1e1e1e; color: #fff; padding: 25px; border-radius: 8px; max-width: 450px; width: 90%; text-align: center; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+    <h3 style="margin-top: 0; color: var(--iso, #0078d4);">Aviso de Download</h3>
+    <p style="font-size: 0.9rem; color: #ccc; line-height: 1.5; margin: 15px 0;">
+      Como a ISO do Windows é um arquivo grande (4,4 GB), o Google Drive exibirá uma tela dizendo que não pode verificar vírus. Pode clicar em <strong>"Fazer o download mesmo assim"</strong> com total segurança!
+    </p>
+    <div style="display: flex; gap: 10px; justify-content: center;">
+      <button onclick="fecharModal()" style="padding: 10px 20px; background: #333; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Cancelar</button>
+      <a id="linkConfirmarDownload" href="#" target="_blank" onclick="fecharModal()" style="padding: 10px 20px; background: var(--iso, #0078d4); color: white; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">Continuar</a>
+    </div>
+  </div>
+</div>
+<script>
+  function abrirAviso(event, url) {
+    event.preventDefault(); // Impede o navegador de abrir o link imediatamente
+    document.getElementById('linkConfirmarDownload').href = url; // Passa o link para o botão "Continuar"
+    document.getElementById('avisoModal').style.display = 'flex'; // Mostra o modal na tela
+  }
 
-    
+  function fecharModal() {
+    document.getElementById('avisoModal').style.display = 'none'; // Esconde o modal
+  }
+</script>    
 
     </div>
   </section>
