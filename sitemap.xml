@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-   <loc>https://davi-rq9.github.io/</loc>
+    <loc>https://davi-rq9.github.io/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,22 +11,22 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://davi-rq9.github.io/Teste/extensoes/</loc>
+    <loc>https://davi-rq9.github.io/extensoes.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://davi-rq9.github.io/Teste/apps/</loc>
+    <loc>https://davi-rq9.github.io/apps.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://davi-rq9.github.io/Teste/sites/</loc>
+    <loc>https://davi-rq9.github.io/sites.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://davi-rq9.github.io/Teste/jogos/</loc>
+    <loc>https://davi-rq9.github.io/jogos.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
