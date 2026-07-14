@@ -173,7 +173,21 @@
     function fecharModal() {
       document.getElementById('avisoModal').style.display = 'none'; // Esconde o modal
     }
-  </script>   
+  </script>  
+  <script>
+  function revelarMintEditions(event) {
+    event.preventDefault(); // Impede qualquer comportamento padrão do botão
+    const container = document.getElementById('mintEditionsContainer');
+    
+    if (container.style.display === 'none') {
+      container.style.display = 'flex'; // Abre as edições do Mint com o design correto
+      // Faz rolar a página suavemente até as opções que se abriram
+      container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      container.style.display = 'none'; // Fecha as edições se clicar novamente
+    }
+  }
+</script>
 
 <footer style="text-align: center; padding: 25px 20px; font-size: 0.8rem; color: #555; line-height: 1.6;">
   <p style="margin: 0 0 10px 0; font-weight: 500; color: #777;">
