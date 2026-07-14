@@ -36,57 +36,102 @@
             <span class="tag tag-muted">Categoria</span>
             <span class="tag tag-mod">Modificada</span>
           </div>
-          <div class="card-name">Windows 10 Enterpise LTSC 2021 (x64/64 bits)</div>
+          <div class="card-name">Microsoft&reg; Windows&reg; 10 Enterpise LTSC 2021 (x64/64 bits)</div>
           <div class="card-desc">Sistema operacional da Microsoft&reg; Windows&reg; versão mais leve e enxuta sem cortana e com suporte extendido(Long-Term Servicing Channel).</div>
         </div>
         <div class="card-right">
-        <a class="btn btn-primary" 
-   style="--acc-btn: var(--iso);" 
-   href="https://drive.usercontent.google.com/download?id=1EP5ZesJgOIdS5SI5n9PlycatacUfH39g&export=download&authuser=0&confirm=t&uuid=7b02edff-3fbe-4c8c-b5a0-ec48a5193665&at=ABswASZcBLEDZ5MPA3nQjLoi_UN9%3A1783998324780"
-   onclick="abrirAviso(event, this.href)">
-   Baixar WIndows 10 LTSC ↓
-</a>
+          <a class="btn btn-primary" 
+             style="--acc-btn: var(--iso);" 
+             href="https://drive.usercontent.google.com/download?id=1EP5ZesJgOIdS5SI5n9PlycatacUfH39g&export=download&authuser=0&confirm=t&uuid=7b02edff-3fbe-4c8c-b5a0-ec48a5193665&at=ABswASZcBLEDZ5MPA3nQjLoi_UN9%3A1783998324780"
+             onclick="abrirAviso(event, this.href)">
+             Baixar Microsft&reg; Windows&reg; 10 LTSC ↓
+          </a>
           <span class="btn-size mono">4.4 GB</span>
         </div>
       </div>
-<div id="avisoModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); align-items: center; justify-content: center;">
-  <div style="background-color: #1e1e1e; color: #fff; padding: 25px; border-radius: 8px; max-width: 450px; width: 90%; text-align: center; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
-    <h3 style="margin-top: 0; color: var(--iso, #0078d4);">Aviso de Download</h3>
-    <p style="font-size: 0.9rem; color: #ccc; line-height: 1.5; margin: 15px 0;">
-      Como a ISO do Windows é um arquivo grande (4,4 GB), o Google Drive exibirá uma tela dizendo que não pode verificar vírus. Pode clicar em <strong>"Fazer o download mesmo assim"</strong> com total segurança!
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: center;">
-      <button onclick="fecharModal()" style="padding: 10px 20px; background: #333; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Cancelar</button>
-      <a id="linkConfirmarDownload" href="#" target="_blank" onclick="fecharModal()" style="padding: 10px 20px; background: var(--iso, #0078d4); color: white; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">Continuar</a>
-    </div>
-  </div>
-</div>
-<script>
-  function abrirAviso(event, url) {
-    event.preventDefault(); // Impede o navegador de abrir o link imediatamente
-    document.getElementById('linkConfirmarDownload').href = url; // Passa o link para o botão "Continuar"
-    document.getElementById('avisoModal').style.display = 'flex'; // Mostra o modal na tela
-  }
 
-  function fecharModal() {
-    document.getElementById('avisoModal').style.display = 'none'; // Esconde o modal
-  }
-</script>    
+      <div class="card featured" style="--acc-soft: var(--iso); --glow-soft: var(--iso-dim);">
+        <div>
+          <div class="card-tags">
+            <span class="tag tag-muted">Sistema</span>
+            <span class="tag tag-mod">Oficial</span>
+          </div>
+          <div class="card-name">Canonical&reg; Ubuntu&reg; Desktop 24.04 LTS (Intel / AMD)</div>
+          <div class="card-desc">O Ubuntu é um sistema de código aberto completo, extremamente seguro e ideal para computadores e notebooks tradicionais rodando processadores Intel ou AMD de 64-bit.</div>
+        </div>
+        <div class="card-right">
+          <a class="btn btn-primary" 
+             style="--acc-btn: var(--iso);" 
+             href="https://releases.ubuntu.com/24.04/ubuntu-24.04-desktop-amd64.iso" 
+             target="_blank">
+             Baixar Ubuntu Desktop (x64) ↓
+          </a>
+          <span class="btn-size mono">4.1 GB</span>
+        </div>
+      </div>
+
+      <div class="card featured" style="--acc-soft: var(--iso); --glow-soft: var(--iso-dim);">
+        <div>
+          <div class="card-tags">
+            <span class="tag tag-muted">Sistema</span>
+            <span class="tag tag-mod">Oficial</span>
+          </div>
+          <div class="card-name">Canonical&reg; Ubuntu&reg; Desktop 24.04 LTS (ARM64)</div>
+          <div class="card-desc">Versão oficial do Ubuntu otimizada sob medida para dispositivos modernos que utilizam arquitetura ARM de 64-bit, como os novos Apple Silicon (M1/M2/M3/M4) ou chips Snapdragon.</div>
+        </div>
+        <div class="card-right">
+          <a class="btn btn-primary" 
+             style="--acc-btn: var(--iso);" 
+             href="https://cdimage.ubuntu.com/releases/24.04/release/ubuntu-24.04-desktop-arm64.iso" 
+             target="_blank">
+             Baixar Ubuntu Desktop (ARM) ↓
+          </a>
+          <span class="btn-size mono">4.1 GB</span>
+        </div>
+      </div>
 
     </div>
   </section>
 
-<footer style="text-align: center; padding: 20px; font-size: 0.8rem; color: #666; line-height: 1.6;">
-  <p style="margin: 0 0 8px 0; font-weight: 500;">
-    &copy; 2026 TechOfThings. Todos os direitos reservados. Hospedado em GitHub Pages.
+  <div id="avisoModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); align-items: center; justify-content: center;">
+    <div style="background-color: #1e1e1e; color: #fff; padding: 25px; border-radius: 8px; max-width: 450px; width: 90%; text-align: center; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+      <h3 style="margin-top: 0; color: var(--iso, #0078d4);">Aviso de Download</h3>
+      <p style="font-size: 0.9rem; color: #ccc; line-height: 1.5; margin: 15px 0;">
+        Como a ISO do Windows é um arquivo grande (4,4 GB), o Google Drive exibirá uma tela dizendo que não pode verificar vírus. Pode clicar em <strong>"Fazer o download mesmo assim"</strong> com total segurança!
+      </p>
+      <div style="display: flex; gap: 10px; justify-content: center;">
+        <button onclick="fecharModal()" style="padding: 10px 20px; background: #333; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Cancelar</button>
+        <a id="linkConfirmarDownload" href="#" target="_blank" onclick="fecharModal()" style="padding: 10px 20px; background: var(--iso, #0078d4); color: white; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">Continuar</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function abrirAviso(event, url) {
+      event.preventDefault(); // Impede o navegador de abrir o link imediatamente
+      document.getElementById('linkConfirmarDownload').href = url; // Passa o link para o botão "Continuar"
+      document.getElementById('avisoModal').style.display = 'flex'; // Mostra o modal na tela
+    }
+
+    function fecharModal() {
+      document.getElementById('avisoModal').style.display = 'none'; // Esconde o modal
+    }
+  </script>   
+
+<footer style="text-align: center; padding: 25px 20px; font-size: 0.8rem; color: #555; line-height: 1.6;">
+  <p style="margin: 0 0 10px 0; font-weight: 500; color: #777;">
+    &copy; 2026 TechOfThings. Todos os direitos reservados. Hospedado com GitHub Pages.
   </p>
   
-  <p style="margin: 0; font-size: 0.75rem; color: #888;">
-    Microsoft&reg; Windows&reg; são marcas registradas da Microsoft Corporation. Este site não possui afiliação oficial com a Microsoft.
+  <p style="margin: 0; font-size: 0.7rem; color: #444; max-width: 600px; margin: 0 auto;">
+    Agradecimento e reconhecimento especial aos projetos comunitários e independentes 
+    <span style="color: #555;">Linux Mint(Clément Lefèbvre/Clem)</span>, 
+    <span style="color: #555;">Linux Lite(Jerry Bezencon)</span> e 
+    <span style="color: #555;">antiX(Paul Banham)</span>, 
+    bem como à <span style="color: #555;">Canonical&reg;</span> (Ubuntu&reg;) e à <span style="color: #555;">Microsoft&reg;</span> (Windows&reg;). 
+    Este site é apenas um indexador mantido por entusiastas e não possui afiliação oficial com as empresas os desenvolvedores.
   </p>
 </footer>
-
-</div>
 
 </body>
 </html>
