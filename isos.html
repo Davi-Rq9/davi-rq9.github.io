@@ -28,6 +28,7 @@
       <h2>ISOs e Imagens de Sistema</h2>
       <span class="path mono">/isos</span>
     </div>
+    
     <div class="cards">
       
       <div class="card featured" style="--acc-soft: var(--iso); --glow-soft: var(--iso-dim);">
@@ -44,7 +45,7 @@
              style="--acc-btn: var(--iso);" 
              href="https://drive.usercontent.google.com/download?id=1EP5ZesJgOIdS5SI5n9PlycatacUfH39g&export=download&authuser=0&confirm=t&uuid=7b02edff-3fbe-4c8c-b5a0-ec48a5193665&at=ABswASZcBLEDZ5MPA3nQjLoi_UN9%3A1783998324780"
              onclick="abrirAviso(event, this.href)">
-             Baixar Microsft&reg; Windows&reg; 10 LTSC ↓
+             Baixar Microsoft&reg; Windows&reg; 10 LTSC ↓
           </a>
           <span class="btn-size mono">4.4 GB</span>
         </div>
@@ -87,63 +88,25 @@
              Baixar Ubuntu Desktop (ARM) ↓
           </a>
           <span class="btn-size mono">4.1 GB</span>
-        <div class="card featured" style="--acc-soft: var(--iso); --glow-soft: var(--iso-dim);">
-  <div>
-    <div class="card-tags">
-      <span class="tag tag-muted">Sistema</span>
-      <span class="tag tag-mod">Linux</span>
-    </div>
-    <div class="card-name">Linux Mint 22 "Wilma"</div>
-    <div class="card-desc">Uma das distribuições mais amigáveis e elegantes do mundo Linux. Clique no botão ao lado para escolher e revelar as opções de download das edições oficiais.</div>
-  </div>
-  <div class="card-right">
-    <button class="btn btn-primary" 
-            style="--acc-btn: var(--iso); cursor: pointer;" 
-            onclick="revelarMintEditions(event)">
-            Escolher Edição ↓
-    </button>
-    <span class="btn-size mono">v22 LTS</span>
-  </div>
-</div>
+        </div>
+      </div>
 
-<div id="mintEditionsContainer" style="display: none; flex-direction: column; gap: 12px; margin: 15px 0 30px 0; padding: 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; width: 100%;">
-  
-  <h4 style="margin: 0 0 10px 0; color: #fff; font-family: 'Space Grotesk', sans-serif;">Selecione a Interface de sua preferência:</h4>
-
-  <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 10px;">
-    <div>
-      <strong style="color: #fff; display: block;">Cinnamon Edition</strong>
-      <span style="font-size: 0.8rem; color: #888;">A mais popular, moderna, cheia de recursos e com efeitos visuais refinados.</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 15px;">
-      <a class="btn btn-primary" style="--acc-btn: var(--iso); padding: 6px 14px; font-size: 0.85rem;" href="https://mirrors.layeronline.com/linuxmint/stable/22/linuxmint-22-cinnamon-64bit.iso" target="_blank">Baixar ISO ↓</a>
-      <span class="mono" style="font-size: 0.8rem; color: #666; min-width: 50px; text-align: right;">2.9 GB</span>
-    </div>
-  </div>
-
-  <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 10px; padding-top: 5px;">
-    <div>
-      <strong style="color: #fff; display: block;">MATE Edition</strong>
-      <span style="font-size: 0.8rem; color: #888;">Visual clássico baseado no antigo GNOME 2. Muito rápido, intuitivo e consome menos RAM.</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 15px;">
-      <a class="btn btn-primary" style="--acc-btn: var(--iso); padding: 6px 14px; font-size: 0.85rem;" href="https://mirrors.layeronline.com/linuxmint/stable/22/linuxmint-22-mate-64bit.iso" target="_blank">Baixar ISO ↓</a>
-      <span class="mono" style="font-size: 0.8rem; color: #666; min-width: 50px; text-align: right;">2.9 GB</span>
-    </div>
-  </div>
-
-  <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; padding-top: 5px;">
-    <div>
-      <strong style="color: #fff; display: block;">Xfce Edition</strong>
-      <span style="font-size: 0.8rem; color: #888;">Focada no extremo desempenho. Perfeita para dar vida nova a computadores antigos ou com pouca memória.</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 15px;">
-      <a class="btn btn-primary" style="--acc-btn: var(--iso); padding: 6px 14px; font-size: 0.85rem;" href="https://mirrors.layeronline.com/linuxmint/stable/22/linuxmint-22-xfce-64bit.iso" target="_blank">Baixar ISO ↓</a>
-      <span class="mono" style="font-size: 0.8rem; color: #666; min-width: 50px; text-align: right;">2.8 GB</span>
-    </div>
-  </div>
-
-</div>
+      <div class="card featured" style="--acc-soft: var(--iso); --glow-soft: var(--iso-dim);">
+        <div>
+          <div class="card-tags">
+            <span class="tag tag-muted">Sistema</span>
+            <span class="tag tag-mod">Oficial</span>
+          </div>
+          <div class="card-name">Linux Mint 22 "Wilma" (LTS)</div>
+          <div class="card-desc">Uma das distribuições mais amigáveis e elegantes do mundo Linux. Clique abaixo para escolher a interface gráfica que melhor se adapta ao seu computador.</div>
+        </div>
+        <div class="card-right">
+          <button class="btn btn-primary" 
+                  style="--acc-btn: var(--iso); cursor: pointer;" 
+                  onclick="abrirModalMint()">
+                  Baixar Mint ↓
+          </button>
+          <span class="btn-size mono">v22 LTS</span>
         </div>
       </div>
 
@@ -163,46 +126,93 @@
     </div>
   </div>
 
+  <div id="mintModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); align-items: center; justify-content: center;">
+    <div style="background-color: #1e1e1e; color: #fff; padding: 25px; border-radius: 8px; max-width: 500px; width: 90%; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5); font-family: 'Inter', sans-serif;">
+      
+      <h3 style="margin-top: 0; color: var(--iso, #0078d4); font-family: 'Space Grotesk', sans-serif; text-align: center; margin-bottom: 5px;">Selecione a Edição do Mint</h3>
+      <p style="font-size: 0.85rem; color: #aaa; text-align: center; margin-bottom: 20px; line-height: 1.4;">
+        Escolha a interface gráfica que melhor se adapta ao seu computador:
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.03); padding: 10px 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+          <div style="text-align: left;">
+            <strong style="font-size: 0.9rem; color: #fff;">Cinnamon</strong>
+            <span style="display: block; font-size: 0.75rem; color: #888;">Moderna e principal</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="mono" style="font-size: 0.75rem; color: #666;">2.9 GB</span>
+            <a class="btn btn-primary" style="--acc-btn: var(--iso); padding: 5px 12px; font-size: 0.8rem; border-radius: 4px;" href="https://mirrors.layeronline.com/linuxmint/stable/22/linuxmint-22-cinnamon-64bit.iso" target="_blank" onclick="fecharModalMint()">Baixar ↓</a>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.03); padding: 10px 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+          <div style="text-align: left;">
+            <strong style="font-size: 0.9rem; color: #fff;">MATE</strong>
+            <span style="display: block; font-size: 0.75rem; color: #888;">Clássica e estável</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="mono" style="font-size: 0.75rem; color: #666;">2.9 GB</span>
+            <a class="btn btn-primary" style="--acc-btn: var(--iso); padding: 5px 12px; font-size: 0.8rem; border-radius: 4px;" href="https://mirrors.layeronline.com/linuxmint/stable/22/linuxmint-22-mate-64bit.iso" target="_blank" onclick="fecharModalMint()">Baixar ↓</a>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.03); padding: 10px 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+          <div style="text-align: left;">
+            <strong style="font-size: 0.9rem; color: #fff;">Xfce</strong>
+            <span style="display: block; font-size: 0.75rem; color: #888;">Extremamente leve</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="mono" style="font-size: 0.75rem; color: #666;">2.8 GB</span>
+            <a class="btn btn-primary" style="--acc-btn: var(--iso); padding: 5px 12px; font-size: 0.8rem; border-radius: 4px;" href="https://mirrors.layeronline.com/linuxmint/stable/22/linuxmint-22-xfce-64bit.iso" target="_blank" onclick="fecharModalMint()">Baixar ↓</a>
+          </div>
+        </div>
+
+      </div>
+
+      <button onclick="fecharModalMint()" style="padding: 10px 20px; background: #333; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85rem; width: 100%;">Fechar</button>
+    </div>
+  </div>
+
   <script>
+    // Controle do Modal de Aviso do Windows
     function abrirAviso(event, url) {
-      event.preventDefault(); // Impede o navegador de abrir o link imediatamente
-      document.getElementById('linkConfirmarDownload').href = url; // Passa o link para o botão "Continuar"
-      document.getElementById('avisoModal').style.display = 'flex'; // Mostra o modal na tela
+      event.preventDefault(); 
+      document.getElementById('linkConfirmarDownload').href = url; 
+      document.getElementById('avisoModal').style.display = 'flex'; 
     }
 
     function fecharModal() {
-      document.getElementById('avisoModal').style.display = 'none'; // Esconde o modal
+      document.getElementById('avisoModal').style.display = 'none'; 
+    }
+
+    // Controle do Modal do Linux Mint
+    function abrirModalMint() {
+      document.getElementById('mintModal').style.display = 'flex';
+    }
+
+    function fecharModalMint() {
+      document.getElementById('mintModal').style.display = 'none';
     }
   </script>  
-  <script>
-  function revelarMintEditions(event) {
-    event.preventDefault(); // Impede qualquer comportamento padrão do botão
-    const container = document.getElementById('mintEditionsContainer');
-    
-    if (container.style.display === 'none') {
-      container.style.display = 'flex'; // Abre as edições do Mint com o design correto
-      // Faz rolar a página suavemente até as opções que se abriram
-      container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    } else {
-      container.style.display = 'none'; // Fecha as edições se clicar novamente
-    }
-  }
-</script>
 
-<footer style="text-align: center; padding: 25px 20px; font-size: 0.8rem; color: #555; line-height: 1.6;">
-  <p style="margin: 0 0 10px 0; font-weight: 500; color: #777;">
-    &copy; 2026 TechOfThings. Todos os direitos reservados. Hospedado com GitHub Pages.
-  </p>
-  
-  <p style="margin: 0; font-size: 0.7rem; color: #444; max-width: 600px; margin: 0 auto;">
-    Agradecimento e reconhecimento especial aos projetos comunitários e independentes 
-    <span style="color: #555;">Linux Mint(Clément Lefèbvre/Clem)</span>, 
-    <span style="color: #555;">Linux Lite(Jerry Bezencon)</span> e 
-    <span style="color: #555;">antiX(Paul Banham)</span>, 
-    bem como à <span style="color: #555;">Canonical&reg;</span> (Ubuntu&reg;) e à <span style="color: #555;">Microsoft&reg;</span> (Windows&reg;). 
-    Este site é apenas um indexador mantido por entusiastas e não possui afiliação oficial com as empresas os desenvolvedores.
-  </p>
-</footer>
+  <footer style="text-align: center; padding: 25px 20px; font-size: 0.8rem; color: #555; line-height: 1.6;">
+    <p style="margin: 0 0 10px 0; font-weight: 500; color: #777;">
+      &copy; 2026 TechOfThings. Todos os direitos reservados. Hospedado com GitHub Pages.
+    </p>
+    
+    <p style="margin: 0; font-size: 0.7rem; color: #444; max-width: 600px; margin: 0 auto;">
+      Agradecimento e reconhecimento especial aos projetos comunitários e independentes 
+      <span style="color: #555;">Linux Mint (Clément Lefèbvre/Clem)</span>, 
+      <span style="color: #555;">Linux Lite (Jerry Bezencon)</span> e 
+      <span style="color: #555;">antiX (Paul Banham)</span>, 
+      bem como à <span style="color: #555;">Canonical&reg;</span> (Ubuntu&reg;) e à <span style="color: #555;">Microsoft&reg;</span> (Windows&reg;). 
+      Este site é apenas um indexador mantido por entusiastas e não possui afiliação oficial com as empresas ou desenvolvedores.
+    </p>
+  </footer>
+
+</div>
 
 </body>
 </html>
