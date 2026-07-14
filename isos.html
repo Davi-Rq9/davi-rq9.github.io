@@ -8,6 +8,35 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+  /* Animação de fundo do modal (fade-in) */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Animação do conteúdo do modal (fade-in + deslizar para cima) */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Classes aplicadas dinamicamente via JS */
+  .modal-overlay {
+    animation: fadeIn 0.25s ease forwards;
+  }
+
+  .modal-content {
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+</style>
 </head>
 <body>
 
@@ -57,13 +86,13 @@
             <span class="tag tag-muted">Sistema</span>
             <span class="tag tag-mod">Oficial</span>
           </div>
-          <div class="card-name">Canonical&reg; Ubuntu&reg; Desktop 24.04 LTS (Intel / AMD)</div>
-          <div class="card-desc">O Ubuntu é um sistema de código aberto completo, extremamente seguro e ideal para computadores e notebooks tradicionais rodando processadores Intel ou AMD de 64-bit.</div>
+          <div class="card-name">Canonical&reg; Ubuntu&reg; Desktop 26.10 (ARM)</div>
+          <div class="card-desc">Versão oficial do Ubuntu otimizada sob medida para dispositivos modernos que utilizam arquitetura ARM de 64-bit, como os novos Apple Silicon (M1/M2/M3/M4) ou chips Snapdragon.</div>
         </div>
         <div class="card-right">
           <a class="btn btn-primary" 
              style="--acc-btn: var(--iso);" 
-             href="https://releases.ubuntu.com/24.04/ubuntu-24.04-desktop-amd64.iso" 
+             href=https://cdimage.ubuntu.com/ubuntu/releases/26.10/release/snapshot-2/ubuntu-26.10-snapshot2-desktop-arm64.iso" 
              target="_blank">
              Baixar Ubuntu Desktop (x64) ↓
           </a>
@@ -77,15 +106,15 @@
             <span class="tag tag-muted">Sistema</span>
             <span class="tag tag-mod">Oficial</span>
           </div>
-          <div class="card-name">Canonical&reg; Ubuntu&reg; Desktop 24.04 LTS (ARM64)</div>
-          <div class="card-desc">Versão oficial do Ubuntu otimizada sob medida para dispositivos modernos que utilizam arquitetura ARM de 64-bit, como os novos Apple Silicon (M1/M2/M3/M4) ou chips Snapdragon.</div>
+          <div class="card-name">Canonical&reg; Ubuntu&reg; Desktop 26.10 (Intel x86/AMD64)</div>
+          <div class="card-desc">O Ubuntu é um sistema de código aberto completo, extremamente seguro e ideal para computadores e notebooks tradicionais rodando processadores Intel ou AMD de 64-bit.</div>
         </div>
         <div class="card-right">
           <a class="btn btn-primary" 
              style="--acc-btn: var(--iso);" 
-             href="https://cdimage.ubuntu.com/releases/24.04/release/ubuntu-24.04-desktop-arm64.iso" 
+             href="https://cdimage.ubuntu.com/ubuntu/releases/26.10/release/snapshot-2/ubuntu-26.10-snapshot2-desktop-amd64.iso" 
              target="_blank">
-             Baixar Ubuntu Desktop (ARM) ↓
+             Baixar Ubuntu Desktop (x64) ↓
           </a>
           <span class="btn-size mono">4.1 GB</span>
         </div>
@@ -113,8 +142,8 @@
     </div>
   </section>
 
-  <div id="avisoModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); align-items: center; justify-content: center;">
-    <div style="background-color: #1e1e1e; color: #fff; padding: 25px; border-radius: 8px; max-width: 450px; width: 90%; text-align: center; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+  <div id="avisoModal" class="modal-overlay" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); align-items: center; justify-content: center;">
+    <div id="avisoModalContent" class="modal-content" style="background-color: #1e1e1e; color: #fff; padding: 25px; border-radius: 8px; max-width: 450px; width: 90%; text-align: center; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
       <h3 style="margin-top: 0; color: var(--iso, #0078d4);">Aviso de Download</h3>
       <p style="font-size: 0.9rem; color: #ccc; line-height: 1.5; margin: 15px 0;">
         Como a ISO do Windows é um arquivo grande (4,4 GB), o Google Drive exibirá uma tela dizendo que não pode verificar vírus. Pode clicar em <strong>"Fazer o download mesmo assim"</strong> com total segurança!
@@ -126,8 +155,8 @@
     </div>
   </div>
 
-  <div id="mintModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); align-items: center; justify-content: center;">
-    <div style="background-color: #1e1e1e; color: #fff; padding: 25px; border-radius: 8px; max-width: 500px; width: 90%; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5); font-family: 'Inter', sans-serif;">
+  <div id="mintModal" class="modal-overlay" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); align-items: center; justify-content: center;">
+    <div id="mintModalContent" class="modal-content" style="background-color: #1e1e1e; color: #fff; padding: 25px; border-radius: 8px; max-width: 500px; width: 90%; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5); font-family: 'Inter', sans-serif;">
       
       <h3 style="margin-top: 0; color: var(--iso, #0078d4); font-family: 'Space Grotesk', sans-serif; text-align: center; margin-bottom: 5px;">Selecione a Edição do Mint</h3>
       <p style="font-size: 0.85rem; color: #aaa; text-align: center; margin-bottom: 20px; line-height: 1.4;">
@@ -176,20 +205,23 @@
   </div>
 
   <script>
-    // Controle do Modal de Aviso do Windows
+    // Controle do Modal de Aviso do Windows (Com Animações)
     function abrirAviso(event, url) {
       event.preventDefault(); 
       document.getElementById('linkConfirmarDownload').href = url; 
-      document.getElementById('avisoModal').style.display = 'flex'; 
+      
+      const overlay = document.getElementById('avisoModal');
+      overlay.style.display = 'flex'; 
     }
 
     function fecharModal() {
       document.getElementById('avisoModal').style.display = 'none'; 
     }
 
-    // Controle do Modal do Linux Mint
+    // Controle do Modal do Linux Mint (Com Animações)
     function abrirModalMint() {
-      document.getElementById('mintModal').style.display = 'flex';
+      const overlay = document.getElementById('mintModal');
+      overlay.style.display = 'flex';
     }
 
     function fecharModalMint() {
