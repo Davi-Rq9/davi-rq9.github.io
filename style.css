@@ -154,6 +154,15 @@
   .cat-dot{ width: 9px; height: 9px; border-radius: 50%; background: var(--acc); }
   .cat-head .path{ color: var(--faint); font-size: 13px; }
 
+.card-thumb{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  display: block;
+  background: var(--surface-hi);
+}
   .cards{
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
