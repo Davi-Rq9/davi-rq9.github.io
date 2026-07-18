@@ -62,6 +62,16 @@
     <a class="logo" href="index.html">TechO<span>fThings[BETA]</span></a>
     <nav class="top-nav">
       <a class="nav-pill" href="index.html">← Voltar</a>
+      <div class="lang-select">
+        <button class="nav-pill" id="langBtn" onclick="toggleLangMenu()">🌐 PT <span class="lang-arrow">▾</span></button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="#" data-lang="pt" onclick="return setLang('pt','PT')">🇧🇷 Português</a>
+          <a href="#" data-lang="en" onclick="return setLang('en','EN')">🇺🇸 English</a>
+          <a href="#" data-lang="es" onclick="return setLang('es','ES')">🇪🇸 Español</a>
+        </div>
+      </div>
+      <a class="nav-pill" href="mailto:SEU_EMAIL_AQUI@exemplo.com">✉️ Suporte</a>
+      <a class="nav-pill nav-pill-donate" href="#">💚 Doar</a>
     </nav>
   </div>
 </header>
@@ -175,6 +185,25 @@
       fecharModal();
       return false;
     }
+
+    // Seletor de idioma
+    function toggleLangMenu(){
+      document.getElementById('langDropdown').classList.toggle('open');
+    }
+    function setLang(code, label){
+      document.getElementById('langBtn').innerHTML = '🌐 ' + label + ' <span class="lang-arrow">▾</span>';
+      document.getElementById('langDropdown').classList.remove('open');
+      if(code !== 'pt'){
+        alert('Tradução em breve! Por enquanto o site está só em Português.');
+      }
+      return false;
+    }
+    document.addEventListener('click', function(e){
+      var wrap = document.querySelector('.lang-select');
+      if(wrap && !wrap.contains(e.target)){
+        document.getElementById('langDropdown').classList.remove('open');
+      }
+    });
   </script>
 
   <footer>
