@@ -22,21 +22,28 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <div class="wrap header-inner">
     <div class="logo">TechO<span>fThings[BETA]</span></div>
-
+    <nav class="top-nav">
+      <div class="lang-select">
+        <button class="nav-pill" id="langBtn" onclick="toggleLangMenu()">🌐 PT <span class="lang-arrow">▾</span></button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="#" data-lang="pt" onclick="return setLang('pt','PT')">🇧🇷 Português</a>
+          <a href="#" data-lang="en" onclick="return setLang('en','EN')">🇺🇸 English</a>
+          <a href="#" data-lang="es" onclick="return setLang('es','ES')">🇪🇸 Español</a>
+        </div>
+      </div>
+      <a class="nav-pill" href="mailto:SEU_EMAIL_AQUI@exemplo.com">✉️ Suporte</a>
+      <a class="nav-pill nav-pill-donate" href="#">💚 Doar</a>
+    </nav>
   </div>
 </header>
-
 <div class="wrap">
-
   <section class="hero">
     <div class="hero-eyebrow mono">index of /community<span class="cursor"></span></div>
     <h1 class="hero-title">Baixe o que quiser,<br>na palma da sua mão.</h1>
     <p class="hero-sub">Um catálogo pessoal de ISOs modificadas, extensões, aplicativos, sites e jogos — testados, simples, rápido com apenas um clique.</p>
-
     <div class="tiles">
       <a class="tile" data-cat="iso" href="isos.html">
         <div class="tile-icon">📀</div>
@@ -64,14 +71,30 @@
       </a>
     </div>
   </section>
-
-
   <footer>
     <span class="mono">TechOfThings — index de arquivos, atualizado manualmente.</span>
     <span class="mono">Hospedado com GitHub Pages.</span>
   </footer>
-
 </div>
 
+<script>
+  function toggleLangMenu(){
+    document.getElementById('langDropdown').classList.toggle('open');
+  }
+  function setLang(code, label){
+    document.getElementById('langBtn').innerHTML = '🌐 ' + label + ' <span class="lang-arrow">▾</span>';
+    document.getElementById('langDropdown').classList.remove('open');
+    if(code !== 'pt'){
+      alert('Tradução em breve! Por enquanto o site está só em Português.');
+    }
+    return false;
+  }
+  document.addEventListener('click', function(e){
+    var wrap = document.querySelector('.lang-select');
+    if(wrap && !wrap.contains(e.target)){
+      document.getElementById('langDropdown').classList.remove('open');
+    }
+  });
+</script>
 </body>
 </html>
