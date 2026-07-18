@@ -67,6 +67,44 @@
   }
   .nav-pill:hover{ color: var(--text); border-color: var(--faint); background: var(--surface-hi); }
 
+  /* botão de doar — leve destaque, sem gritar */
+  .nav-pill-donate{
+    border-color: var(--iso);
+    color: var(--iso);
+  }
+  .nav-pill-donate:hover{
+    background: var(--iso-dim);
+    border-color: var(--iso);
+    color: var(--iso);
+  }
+
+  /* seletor de idioma */
+  .lang-select{ position: relative; }
+  .lang-select button.nav-pill{ cursor: pointer; background: transparent; font-family: inherit; }
+  .lang-arrow{ font-size: 10px; opacity: .7; }
+  .lang-dropdown{
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 160px;
+    background: var(--surface-hi);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 6px;
+    z-index: 30;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  }
+  .lang-dropdown.open{ display: block; }
+  .lang-dropdown a{
+    display: block;
+    padding: 8px 10px;
+    border-radius: 7px;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .lang-dropdown a:hover{ background: var(--surface); }
+
   /* hero */
   .hero{ padding: 76px 0 56px; }
   .hero-eyebrow{
