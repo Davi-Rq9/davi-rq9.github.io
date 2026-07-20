@@ -25,7 +25,8 @@
 <header>
   <div class="wrap header-inner">
     <div class="logo">TechO<span>fThings[BETA]</span></div>
-    <nav class="top-nav">
+    <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+    <nav class="top-nav" id="topNav">
       <div class="lang-select">
         <button class="nav-pill" id="langBtn" onclick="toggleLangMenu()">🌐 PT <span class="lang-arrow">▾</span></button>
         <div class="lang-dropdown" id="langDropdown">
@@ -78,6 +79,9 @@
 </div>
 
 <script>
+  function toggleMobileMenu(){
+    document.getElementById('topNav').classList.toggle('open');
+  }
   function toggleLangMenu(){
     document.getElementById('langDropdown').classList.toggle('open');
   }
